@@ -1,0 +1,78 @@
+Python Data Types
+
+Strings
+    "Hello"
+    "Hello"[0] returns 'H' just like in array subscripts.
+    print("123" + "345") // returns 123345 (normal concatenation of strings).
+
+Integer
+    print(123 + 345) // returns 468
+    To represent big numbers such as 123456789 we can write them as 123_456_789 for better readability.
+
+Float
+    3.14159
+
+Boolean
+    True
+    False
+
+---------------------------------------------------------------------------------------------------------------
+
+len("Hello") returns length of the string.
+does not take anything other than strings (will give error).
+
+Also we cannot concatenate Strings with integers, i.e.,
+    num = 54
+    print("Hi I am Dhruv with age" + num + "from Lucknow!") // gives error.
+
+To do this we need to convert integer to string using str() function.
+    num = 54
+    print("Hi I am Dhruv with age" + str(num) + "from Lucknow!") // prints the expected output.
+
+type() function returns the data type of the variable.
+float("100.5") returns a float type with value 100.5
+int("100") returns a integer data type with value 100
+
+-----------------------------------------------------------------------------------------------------------------
+
+Inputs in Python are of type strings by default so if we want to input a number we have to do type cast to integer.
+
+Division in python returns a float type always
+    6/3 returns 2.0
+
+Exponent operator in Python is **
+    2 ** 3 // 8
+    3 ** 2 // 9
+
+Precedence of operators
+    ()
+    **
+    * /
+    + -
+
+3 * 3 + 3 / 3 - 3
+9 + 1.0 - 3
+7.0
+
+----------------------------------------------------------------------------------------------------------------
+
+round() function rounds to the closest whole number
+    round(8/3) // 3
+    round(8/3, 2) // 2.67 (rounds to the second argument precision (2 decimal places in this case))
+
+Floor operator - //
+    8 // 3 returns 2 of type Integer
+
+Modulus operator - %
+
+ShortHand operators +=, -=, /=, *=
+
+F-Strings
+    so that we don't have to convert to str again and again when printing.
+
+    num = 5
+    print(f"Your score is {num}") // Your score is 5.
+
+    f"Your score is {num}" is a F-String.
+
+-----------------------------------------------------------------------------------------------------

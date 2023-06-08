@@ -1,0 +1,32 @@
+Randomisation
+
+Python uses a Mersenne Tweister algorithm to generate pseudo-random numbers.
+
+To use the random module, we need to import it at the start of our program.
+
+random.randint(1, 10) generates a random integer between 1 and 10 (both inclusive).
+
+random.random() generates a random floating point number between 0.0 and 1.0(not inclusive).
+
+-------------------------------------------------------------------------------------------------------
+
+Lists in Python (similar to arrays in Java/C++)
+used to store groups of similar ordered data.
+fruit = [item1, item2] // is a list.
+
+use [i] subscript to get ith element in the list (starting from 1).
+
+and lists are mutable, we can also add an element to the list using append() function (if we want to insert at the end).
+
+we can also insert a new element at any index and extend this list to another list.
+
+Refer documentation to see what you can do with lists....
+
+--------------------------------------------------------------------------------------------------------
+
+If we go to an index beyond the size of the list it gives an IndexError.
+We can have negative indexes. -1 index is just the last element and so on.
+
+Also, we can have nested lists (similar to higher dimensional arrays).
+
+--------------------------------------------------------------------------------------------------------

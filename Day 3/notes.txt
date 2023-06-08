@@ -1,0 +1,37 @@
+Control Statements in Python
+
+if num == 5:
+    print("You are so smart!")
+else:
+    print("Not so smart")
+
+Indentation is very important in Python, it is used to define code blocks like {} in Java and C++.
+Colon(:) indicates the start of code block.
+
+------------------------------------------------------------------------------------------------------
+
+Nested if Statements and elif (else if)
+
+if condition:
+    if condition2:
+        do 1
+    else:
+        do 2
+else:
+    do 3
+
+1 is done if both condition and condition2 are True.
+2 is done if condition is True but condition2 is False.
+3 is done if condition is False.
+
+To represent more than two possibilities we use elif:
+
+----------------------------------------------------------------------------------------------------------
+
+Logical Operators
+
+and
+or
+not
+
+----------------------------------------------------------------------------------------------------------
