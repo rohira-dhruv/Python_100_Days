@@ -1,0 +1,30 @@
+Loops in Python
+The purpose of loops is to execute the same statement multiple number of times.
+
+for item in item_list:
+    print(item)
+
+Prints all items in the list item_list.
+
+fruits = ["Apple", "Peach", "Pie"]
+
+for fruit in fruits:
+    print(fruit + " pie")
+
+--------------------------------------------------------------------------------------
+
+What if we want to use our loop without lists?
+
+for number in range(1, 10):
+    print(number) // prints numbers from 1 to 9 as 10 is not included in the range.
+
+By default, range increments by 1. To change this we can add another argument which is the step.
+
+To add sum of all natural numbers upto 100:
+
+for num in range(1, 101):
+    total += num
+print(total)
+
+---------------------------------------------------------------------------------------
+

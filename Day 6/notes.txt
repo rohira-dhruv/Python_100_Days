@@ -1,0 +1,26 @@
+Python Functions
+
+Defining Functions:
+
+def my_function():
+    print("Hello")
+    print("Bye")
+
+To call it, just type the name of the function and parantheses with appropriate parameters.
+
+Calling it:
+
+my_function()
+
+Adds Readability and saves time on reusable code.
+
+------------------------------------------------------------------------------------------------------
+
+Indentation in Python
+
+Very important, indentation = 4 spaces, used to define the blocks of code.
+
+While Loops:
+used when number of iterations are not fixed or known during the start of the loop.
+
+-------------------------------------------------------------------------------------------------------
