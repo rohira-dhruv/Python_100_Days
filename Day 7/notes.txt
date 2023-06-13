@@ -1,0 +1,15 @@
+If you have a complex problem on your hands, we must try to break it into smaller problems that can be solved easily.
+Creating flowcharts also helps you to understand the flow of the complex problem. (lucid chart or diagrams.net are two good websites).
+
+For Hangman,
+
+--> Start
+--> Generate a random word.
+--> Generate as many blanks as letters in the word.
+--> Ask the user to enter a letter.
+--> is the letter in the word?
+--> if yes, replace the blank with the letter.
+--> if all blanks are filled, you win
+--> if no, lose a life.
+--> if all lives are lost, you lose.
+
