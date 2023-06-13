@@ -1,0 +1,31 @@
+Functions with outputs:
+
+def format_name(f_name, l_name):
+    print(f_name.title())
+    print(l_name.title())
+    return "lol"
+
+ans = format_name("angela", "ANGELA");
+
+--------------------------------------------------------------
+
+Multiple return values
+
+def format_name(f_name, l_name):
+    if f_name == "" or l_name == "":
+        return
+
+    formatted_f_name = f_name.title()
+    formatted_l_name = l_name.title()
+    return f"Result: {formatted_f_name} {formatted_l_name} "
+
+---------------------------------------------------------------
+
+Docstrings
+
+used to create documentation of a user-defined function. First line after declaration starting with """. Can be multiline.
+
+-----------------------------------------------------------------
+
+Create a Calculator.
+

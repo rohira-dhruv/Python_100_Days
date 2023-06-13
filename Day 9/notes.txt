@@ -1,0 +1,34 @@
+Dictionaries in Python
+
+group and tag related information
+key-value pairs
+{Key: Value} represents a dictionary where each such pair is seperated by a comma
+
+programming_dictionary = {"Bug": "An error in a program that prevents the program from running as expected.",
+ "Function": "A piece of code that you can easily call over and over again."}
+
+elements of the dictionary are identified by their keys.
+
+To add new items to the dictionary,
+programming_dictionary["Loop"] = "The action of doing something over and over again"
+
+To wipe an entire dictionary,
+programming_dictionary = {} // So dictionaries are mutable
+
+We can also edit the dictionary similarly
+
+for thing in programming_dictionary:
+    print(thing) // this gets only the keys.
+    // TO get values
+    print(programming_dictionary[thing])
+
+----------------------------------------------------------------------------------------------------------------------
+
+Nesting in Dictionaries
+
+{
+    Key: [List],
+    Key2: {Dict}
+}
+
+-----------------------------------------------------------------------------------------------------------------------

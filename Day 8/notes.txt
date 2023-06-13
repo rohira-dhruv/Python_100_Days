@@ -1,2 +1,25 @@
-Positional vs Keyword Arguments
+Python Functions with inputs
 
+def greet(name):
+    print("Hello")
+    print(f"This is {name}")
+    print("Bye")
+
+greet("Dhruv")
+
+"Dhruv" is an argument, whereas name is the parameter.
+
+We can have more than 1 inputs to a function.
+
+def greet_with(name, location):
+    print(f"Hello {name}")
+    print(f"What is it like in {location}")
+
+greet_with("Jack Bauer", "Nowhere")
+greet_with("Nowhere", "Jack Bauer") //both produce different outputs, so order of arguments is important.
+
+these are called positional arguments as we haven't specified anything.
+
+greet_with(location = "Nowhere", name = "Jack Bauer")
+These are called keyword arguments.
+-------------------------------------------------------------------------------------------------------------
