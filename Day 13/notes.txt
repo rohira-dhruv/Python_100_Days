@@ -1,0 +1,12 @@
+Debugging
+
+1.  Test all your assumptions that you have taken for the code. Generally one of them is false and has introduced an error.
+2.  Reproduce the bug. keep reusing parts of code and check if they are faulty.
+3.  Look at the errors highlighted by the editor and the console.
+4.  Debugging is something you get good at with experience. The more bugs we get rid of, the more knowledgeable we become.
+5.  Use print statements to check where your code goes bad.
+6.  Lastly, use a debugger. PythonTutor is a good online tool. Thonny is one good offline tool. Use breakpoints to check status of all variables at that instance.
+7.  Take a break. Sometimes simple bugs are not so apparent.
+8.  Ask a friend. Gets a set of fresh eyes to look at your code.
+9.  Run your code often. That is, write after the slightest changes so that the bugs don't pile up.
+10. Use StackOverflow.
