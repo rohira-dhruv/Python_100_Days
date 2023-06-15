@@ -1,0 +1,42 @@
+Scope of variables
+
+enemies = 1
+
+def func():
+    enemies = 2
+    print(enemies) // 2
+
+func()
+print(enemies) // 1
+
+a variable declared inside a fuction is accessible only inside the function.
+
+Global scope: no indentation declaration.
+
+Namespace: The space of code where the function is accessible.
+
+There is no block scope in Python. It has the same scope as the enclosing conditional or loop statement.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Modifying Global Scope
+
+enemies = 1
+def inc_enemies():
+    enemies = 2     // creates a new copy
+    print(enemies)
+    global enemies = 2 // changes the global variable. But generally we dont do as it is prone to bugs.
+
+inc_enemies()
+print(enemies)
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Python constants
+
+Global scope is useful to define constants in your code that never change throughout the execution of your program.
+
+PI = 3.14159
+URL = "https://youtube.com"
+
+----------------------------------------------------------------------------------------------------------------------------------
