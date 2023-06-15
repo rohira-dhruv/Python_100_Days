@@ -7,6 +7,7 @@ HARD_LEVEL_TURNS = 5
 
 
 def compare(guess, target):
+    """Checks and prints whether guess is higher or lower than target."""
     if guess < target:
         print("Too low.")
     elif guess > target:
