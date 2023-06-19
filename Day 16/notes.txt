@@ -1,0 +1,12 @@
+Object Oriented Programming
+
+// Split a lot of tasks into several reusable pieces.
+// Model something: take two parts - what it has (attributes) and what it does (functions/methods)
+// Class is a blueprint of the model from which you can create multiple objects having those attributes and methods.
+// Class names are in Pascal Case.
+// car = Car()
+
+
+// Turtle Documentation - https://docs.python.org/3/library/turtle.html
+
+PyPI - Python Package Index
