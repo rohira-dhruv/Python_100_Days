@@ -1,0 +1,7 @@
+Inheritance - An important aspect of OOP
+
+a child class can inherit both behaviour and attributes from parent class.
+
+class Fish(Animal):
+    def __init__(self):
+        super().__init__()
