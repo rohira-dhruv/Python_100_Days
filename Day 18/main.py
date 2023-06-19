@@ -1,3 +1,4 @@
+# Hirst Painting Project.
 import random
 from turtle import Turtle, Screen
 
