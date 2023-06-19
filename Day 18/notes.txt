@@ -1,0 +1,23 @@
+Imports in Python
+
+1. Basic Imports
+     import turtle
+     turtle.Turtle()
+
+2. from ... import ...
+    from turtle import Turtle
+    Turtle()
+
+3. Aliasing
+    import turtle as t
+    tim = t.Turtle()
+
+4. Installing Modules
+    PyPI - Python Package Interface
+
+
+Tuples in Python
+- Similar to a list, except they are immutable.
+- enclosed in ()
+- convert tuple to a list by calling list(my_tuple)
+-
