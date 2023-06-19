@@ -1,0 +1,15 @@
+__init__ is the Constructor method for the class.
+Initialise the object and its attributes.
+
+class Car:
+    def __init__(self, seats):
+        self.seats = seats
+
+my_car = Car(5)
+
+but we can't have a default constructor like this,i.e, Car() will give an error.
+
+Adding methods to a class:
+
+def enter_race_model(self):
+    self.seats = 2
