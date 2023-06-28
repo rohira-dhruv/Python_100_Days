@@ -1,3 +1,64 @@
 Day 25 - Working with CSV data and the Pandas library.
 
 ---------------------------------------------------------------
+
+1.Open csv file just like any other text file and use readlines() to read the data, but you wouldn't get formatted data,
+    a list of strings and inside every string we will have commas between data.
+
+2. csv library (in-built).
+
+    import csv
+
+with open("weather_data.csv") as data_file:
+    data = csv.reader(data_file)
+    temperatures = []
+    for row in data:
+        if row[1] != "temp":
+            temperatures.append(int(row[1]))
+    print(temperatures)
+
+so much code just to get that column of temperatures from the csv.
+
+3. Pandas library.
+
+data = pandas.read_csv("weather_data.csv")
+print(data) --> prints data in tabular format with indices.
+
+To get a column, we just need to write.
+data["temp"]
+
+Pandas has two major data structures or types
+
+    1. DataFrames(2-D) basically the sheet in excel.
+    2. Series(1-D) a column in excel or a row.
+
+We can convert the dataFrame type to a dictionary in Python, and Series to a list
+
+data_dict = data.to_dict()
+temp_list = data["temp"].to_list()
+
+Internally the data frame object has each column (Series) as an attribute of the DataFrame Object.
+
+so data["temp"] is the same as data.temp
+
+print(data["temp"].mean())
+print(data["temp"].max())
+
+# Get data in Columns
+print(data["condition"])
+print(data.condition)
+
+# Get data in Rows
+print(data[data.day == "Monday"])
+print(data[data.temp == data.temp.max()])
+
+monday = data[data.day == "Monday"]
+print((9 / 5 * monday.temp) + 32)
+
+# Create a DataFrame from Scratch
+data_dict = {
+    "students": ["Amy", "James", "Angela"],
+    "scores": [76, 56, 65]
+}
+data = pandas.DataFrame(data_dict)
+data.to_csv("new_sheet.csv")
