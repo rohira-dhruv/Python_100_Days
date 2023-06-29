@@ -1,0 +1,81 @@
+Day 26 - List Comprehension
+
+Unique to Python Language.
+It's a case where we create a new list from a previous list.
+
+numbers = [1, 2, 3]
+new_list = []
+for n in numbers:
+    add_1 = n + 1
+    new_list.append(add_1)
+
+ Using List Comprehension, we can do this with just one line of code.
+
+ new_list = [new_item for item in list]
+
+ so in this case
+ new_list = [num + 1 for num in numbers]
+
+------------------------------------------------------
+Python Sequences
+
+- list
+- range
+- string
+- tuple
+
+we can take any sequence and perform a list comprehension on it.
+
+new_list = [num * 2 for num in range(1, 5)]
+
+We can also put conditions to further filter our choice of adding an element in the list, called
+Conditional List Comprehension.
+
+new_list = [new_item for item in list if test]
+
+Ex:- names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+
+short_name_list = [name for name in names if len(name) < 5]
+long_name_list = [name.upper() for name in names if len(name) > 5]
+
+
+---------------------------------------------------------------------
+
+Dictionary Comprehension
+
+new_dict = {new_key:new_value for item in list}
+
+new_dict = {new_key:new_value for (key, value) in dict.items()}
+
+Conditional Dictionary Comprehension
+
+new_dict = {new_key:new_value for (key, value) in dict.items() if test}
+
+student_scores = {student: random.randint(1, 100) for student in names}
+
+-----------------------------------------------------------------------------------
+
+How to Iterate over a Pandas DataFrame
+
+student_dict = {
+    "student": ["Angela", "James", "Lily"]
+    "score": [56, 76, 98]
+}
+
+for (key, value) in student_dict.items():
+    print(key)
+
+import pandas
+
+student_dataframe = pandas.Dataframe(student_dict)
+print(student_dataframe)
+
+Loop through a dataFrame
+
+for (key, value) in student_dataframe.items():
+    print(value)
+
+# Loop through rows of a data frame.
+for (index, row) in student_dataframe.iterrows():
+    if row.student == "Angela":
+        print(row)
