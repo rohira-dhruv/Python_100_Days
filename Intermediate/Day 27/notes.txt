@@ -1,0 +1,80 @@
+Day 27 - Graphical User Interfaces using Tkinter module
+
+
+--------------------------------------------------------------------
+
+Advanced Python Arguments
+
+def func(a=1, b=2, c=3):
+    do something with a
+    then with b
+    finally with c
+
+when im calling the function i have created, I can just do func() and it will go forward with the default values in the
+method signature. If i have to change just one argument i can pass it as func(b=5).
+
+When we use a lib function, for example, turtle.write(), we see that though it shows five positional arguments, only
+args is the required one while all other are optional.
+
+-----------------------------------------------------------------------
+
+*args - Many positional arguments
+
+suppose we have a function
+
+def add(n1, n2):
+    return n1 + n2
+
+but we can only add two numbers when we do this, what if we want to be able to add any count of numbers.
+
+we can change the function as follows:
+
+def add(*args):
+    for n in args:
+        print(n)
+
+args is a tuple of arguments
+
+----------------------------------------------------------------------------
+
+**kwargs - Many Keyword Arguments
+
+kwargs is basically a dictionary where the keyword is the key and the value passed is the value.
+
+def calculate(**kwargs):
+    print(kwargs)
+
+calculate(add=3, multiply=5)
+
+Till now, whenever we wanted to access the value for a key in the dictionary, we used to use square brackets,
+Suppose the key we are searching for, does not exist, then using square brackets will give an error, but we can also
+use the get() method which returns None if the key is not found in the dict, so its better to use get()
+
+-------------------------------------------------------------------------------------------------------------
+
+We can set options of a Button or any other component in 3 ways:
+
+1. At the time of Object Creation
+    fred = Button(self, fg="red", bg="blue")
+
+2. after object creation, treating the option name like a dictionary index.
+    fred["fg"] = "red"
+    fred["bg"] = "blue"
+
+3. using the config() method to update multiple attributes after object creation.
+    fred.config(fg="red", bg="blue")
+
+Look at Tkinter documentation
+--------------------------------------------------------------------------------------------------------------
+
+There are many Layout Managers available with Tkinter module in python.
+
+One is pack(), which just places items one after the other but it is hard to place it at some exact location.
+Another is place(x, y), using which we can place it on specific x and y coordinates, but it becomes hard to keep track
+    of all the widget coordinates placed already.
+Lastly we have Grid, it divides the screen into rows and columns. Also the sizing of the grid is relative. (Most Preferred).
+
+Caution: We should not mix pack and grid in the same program, it gives error.
+----------------------------------------------------------------------------------------------------------------
+
+How to add padding, use config() methods of all components.
