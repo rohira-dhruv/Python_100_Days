@@ -31,8 +31,8 @@ def save():
     if len(password) == 0 or len(website) == 0 or len(email) == 0:
         messagebox.showinfo(message="Please don't leave any fields empty")
     else:
-        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} \nPassword:"
-                                                              f" {password}\nIs it ok to save? ")
+        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} \n"
+                                                              f"Password: {password}\nIs it ok to save? ")
         if is_ok:
 
             with open(file="data.txt", mode="a") as data_file:
