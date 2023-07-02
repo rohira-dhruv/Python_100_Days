@@ -1,0 +1,47 @@
+Day 30 - Errors, Exceptions and Saving JSON data.
+
+Say I run this code and I do not have any file named "file.txt" in my PWD.
+
+with open("file.txt") as file:
+    file.read()
+
+So this will give an error FileNotFoundError
+
+so we can avoid abrupt code errors by handling exceptions, so that either we avoid crashing and can fail gracefully,
+or solve this problem of crashing altogether.
+
+try : Something that might cause an exception
+except : do this if there was an exception.
+else : do this if there was not an exception.
+finally : execute this code no matter what happens, usually used for tiding things up.
+
+try:
+    file = open("file.txt")
+    dictionary = {"key":"value"}
+    print(dictionary["safds"])
+except FileNotFoundError:
+    file = open("file.txt", mode="w")
+    file.write("Something")
+except KeyError as error_message:
+    print(f"The key {error_message} does not exist.")
+
+As you can see we can handle specific exceptions and handle all cases one by one.
+
+---------------------------------------------------------------------------------------------
+
+We can also raise aur own Exceptions if we want
+
+raise TypeError("Message")
+
+height = float(input("Height: "))
+weight = int(input("Weight: "))
+
+if height > 3:
+    raise ValueError("Human heights should not be over 3 meters.")
+
+bmi = weight / height ** 2
+
+print(bmi)
+
+---------------------------------------------------------------------------------------------
+
