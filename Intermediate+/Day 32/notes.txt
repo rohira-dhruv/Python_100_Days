@@ -1,0 +1,40 @@
+Day 32 - Email SMTP and the datetime module
+
+Automate a happy birthday email to all friends and family.
+Email SMTP is an inbuilt module that allows to send email using Python code.\
+
+Google SMTP Port
+
+smtplib module
+
+Simple Mail Transfer Protocol.
+
+sender to gmail server to recipient mail server to recipient mail client.
+
+my_email = "gl1tch.djr@gmail.com"
+password = "yhdyslduogyvrxxs"
+
+with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
+    connection.starttls()
+    connection.login(user=my_email, password=password)
+    connection.sendmail(
+        from_addr=my_email,
+        to_addrs="rohirajdhruv@gmail.com",
+        msg="Subject:Hello\n\nThis is the body for my email.")
+
+
+starttls makes sure that our messages are encrypted with TLS encryption.
+
+
+---------------------------------------------------------------------------------------
+
+datetime module.
+
+now = dt.datetime.now()
+weekday = now.weekday()
+
+----------------------------------------------------------------------------------------
+
+How to run code daily or automate it
+
+we can host it on the cloud using pythonanywhere.
