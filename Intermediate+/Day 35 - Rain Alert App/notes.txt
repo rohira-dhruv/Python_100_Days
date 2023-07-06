@@ -1,0 +1,21 @@
+Day 35 - API keys, Authentication and Environment Variables
+Rain Alert Application
+
+--> What is API authentication?
+We're going to learn how to authenticate ourselves with an API provider so that we can access more valuable and secure data.
+
+APIs are a way of selling data, as it is very hard to maintain such data.
+But generally, all API providers offer a free tier where users can test out the functionality.
+To avoid misuse of this free tier, they use API keys similar to personal account number and password.
+
+--> Using OpenWeather API using an API Key.
+
+generate an api key and pass it as an API parameter for authentication.
+
+--> Send SMS through Twilio API
+
+
+Environment Variables
+
+Security and Simplicity
+We can store our api and auth keys as environment variables so as to hide them from others.
