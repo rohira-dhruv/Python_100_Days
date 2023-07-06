@@ -1,0 +1,15 @@
+Unescaping HTML Entities in Python
+
+import html
+html.unescape(string)
+-----------------------------------------------------------
+
+Type Hints
+
+def is_under_age(age: int) -> bool:
+    return age > 18
+
+so it helps us understand that the age parameter is expecting an int and the output of the function is expected a bool
+value. So it helps us avoid TypeErrors to some extent.
+
+------------------------------------------------------------
