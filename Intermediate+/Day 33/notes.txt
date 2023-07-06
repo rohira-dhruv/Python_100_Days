@@ -1,0 +1,131 @@
+Day 33 - Application Programming Interfaces (APIs)
+-------------------------------------------------------------------
+What are Application Programming Interfaces?
+
+an Application Programming Interface or API is a set of commands, functions, protocols, and objects that programmers
+can use to create software or interact with an external system. It is kind of a barrier between our program and the
+external system, and it helps us communicate with the external system and use its functionality. So we can request data
+from the external system using an API (some rules that the external system has set) and if our request follows those
+rules, the external system sends the data as Response to our request.
+
+For example,
+Yahoo weather app has an API that lets us use their data in our programs.
+Coinbase has an API that we can use.
+Even NBA has an API that lets us use the stats.
+
+One suitable analogy is that API is like a menu to the restaurant.
+---------------------------------------------------------------------------------
+
+One of the most important aspect of an API is the API endpoint. It is basically the address where the data is stored.
+It is a URL generally for example, api.coinbase.com is the endpoint for the Coinbase API.
+
+One of the simplest APIs is the International Space Station Current Location API. (Endpoint: http://api.open-notify.org/iss-now.json)
+
+It gives the output as a json.
+
+To make API requests, we need to use the 'requests' module. It is not pre-built in Python and has to be installed separately.
+
+we can use the requests.get() function to get the data from some url.
+
+CODE:
+
+import requests
+
+response = requests.get(url="http://api.open-notify.org/iss-now.json")
+print(response)
+
+Output:
+<Response [200]> so the number 200 is the response code of the API.
+
+-----------------------------------------------------------------------------------------------------------
+
+Working with Responses
+
+Response codes have a very specific meaning.
+
+1XX: Hold On (Informational)
+    100: Continue
+    101: Switching Protocols
+    102: Processing
+
+2XX: Here you Go (Successful)
+    200: OK
+    201: Created
+    202: Accepted
+    203: Non-authoritative Information
+    204: No Content
+    205: Reset Content
+    206: Partial Content
+    207: Multi-Status
+    208: Already Reported
+    226: IM Used
+
+3XX: Go Away (Redirection)
+    300 Multiple Choices
+    301 Moved Permanently
+    302 Found
+    303 See Other
+    304 Not Modified
+    305 Use Proxy
+    307 Temporary Redirect
+    308 Permanent Redirect
+
+4XX: You Screwed Up (Client Error)
+    400 Bad Request
+    401 Unauthorized
+    402 Payment Required
+    403 Forbidden
+    404 Not Found
+    405 Method Not Allowed
+    406 Not Acceptable
+    407 Proxy Authentication Required
+    408 Request Timeout
+    409 Conflict
+    410 Gone
+    411 Length Required
+    412 Precondition Failed
+    413 Payload Too Large
+    414 Request-URI Too Long
+    415 Unsupported Media Type
+    416 Requested Range Not Satisfiable
+    417 Expectation Failed
+    418 I’m a teapot
+    421 Misdirected Request
+    422 Unprocessable Entity
+    423 Locked
+    424 Failed Dependency
+    426 Upgrade Required
+    428 Precondition Required
+    429 Too Many Requests
+    431 Request Header Fields Too Large
+    444 Connection Closed Without Response
+    451 Unavailable For Legal Reasons
+    499 Client Closed Request
+
+5XX: Server Screwed Up (Server Error)
+    500 Internal Server Error
+    501 Not Implemented
+    502 Bad Gateway
+    503 Service Unavailable
+    504 Gateway Timeout
+    505 HTTP Version Not Supported
+    506 Variant Also Negotiates
+    507 Insufficient Storage
+    508 Loop Detected
+    510 Not Extended
+    511 Network Authentication Required
+    599 Network Connect Timeout Error
+
+---------------------------------------------------------------------------
+
+response = requests.get(url="http://api.open-notify.org/iss-now.json")
+response.raise_for_status() // This function raises an Exception if an error occurs either Server side or client side.
+
+data = response.json() //Returns the json format data
+
+API Parameters:
+It is a way of getting different outputs based on the different inputs passed to the API as parameters.
+
+One important observation:
+datetime.datetime.now() returns the local time
+
