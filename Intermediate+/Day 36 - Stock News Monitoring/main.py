@@ -1,3 +1,4 @@
+import os
 import requests
 from twilio.rest import Client
 STOCK = "TSLA"
@@ -7,10 +8,11 @@ STOCK_API_KEY = "QYMB6GNYNJ9X8Z2K"
 STOCK_API_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_API_KEY = "e3a83cbd298c4f56bca6855b13df224f"
 NEW_API_ENDPOINT = "https://newsapi.org/v2/everything"
-TWILIO_AUTH_TOKEN = "1389aae6144ebd193d520e1a1ab527ce"
+TWILIO_AUTH_TOKEN = str(os.environ.get("TWILIO_AUTH_TOKEN"))
 TWILIO_ACCOUNT_SID = "ACf82b29f3718ba711a9e53f9e7bb836ca"
 TWILIO_PHONE = "+18145264325"
 
+print(TWILIO_AUTH_TOKEN)
 
 stock_params = {
     "function": "TIME_SERIES_DAILY_ADJUSTED",
