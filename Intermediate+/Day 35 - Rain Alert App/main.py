@@ -34,6 +34,6 @@ if will_rain:
     message = client.messages.create(
         body="Looks like it's going to rain today! Don't forget to bring an ☔",
         from_="+18145264325",
-        to="+919795678808"
+        to="+916386932267"
     )
     print(message.status)
