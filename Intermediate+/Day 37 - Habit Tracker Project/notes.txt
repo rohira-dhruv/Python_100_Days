@@ -1,0 +1,8 @@
+Day 37 - Advanced Authentication Methods using the header and API POST/PUT/DELETE requests.
+
+HTTP POST Requests
+
+A post request is where we give some data to the external system and we are not interested in the response that the system is giving us.
+Put is used to update the data
+Delete is used to delete the data.
+
