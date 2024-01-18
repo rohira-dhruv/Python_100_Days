@@ -9,7 +9,7 @@ t.penup()
 def plot_state_on_screen(state_name):
     state_data = data[data.state == state_name]
     t.goto(int(state_data.x), int(state_data.y))
-    t.write(answer_state)
+    t.write(state_name)
 
 
 screen = turtle.Screen()
