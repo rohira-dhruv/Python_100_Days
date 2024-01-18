@@ -24,7 +24,7 @@ screen.onkey(key="Right", fun=snake.right)
 
 while is_game_on:
     screen.update()
-    time.sleep(0.08)
+    time.sleep(0.1)
     snake.move()
 
     if snake.head.distance(food) < 15:
@@ -32,7 +32,7 @@ while is_game_on:
         snake.extend()
         score_board.increase_score()
 
-    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 270 or snake.head.ycor() < -290:
+    if snake.head.xcor() > 295 or snake.head.xcor() < -295 or snake.head.ycor() > 280 or snake.head.ycor() < -295:
         is_game_on = False
         score_board.game_over()
 
