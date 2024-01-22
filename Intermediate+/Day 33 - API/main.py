@@ -2,11 +2,12 @@ import time
 import requests
 from datetime import datetime, timezone
 import smtplib
+
 # INSERT YOUR CREDENTIALS HERE.
-MY_LAT = -40
-MY_LONG = 110
-MY_EMAIL = "gl1tch.djr@gmail.com"
-MY_PASSWORD = "yhdyslduogyvrxxs"
+MY_LAT = -30
+MY_LONG = -110
+MY_EMAIL = "jacobperalta00000@gmail.com"
+MY_PASSWORD = "govijejqohkapwxt"
 
 
 def is_iss_close():
