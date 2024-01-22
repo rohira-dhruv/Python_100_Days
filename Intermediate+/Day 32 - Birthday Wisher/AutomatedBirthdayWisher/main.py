@@ -3,8 +3,8 @@ import datetime as dt
 import random
 import smtplib
 PLACEHOLDER = "[NAME]"
-MY_EMAIL = "gl1tch.djr@gmail.com"
-MY_PASSWORD = "yhdyslduogyvrxxs"
+MY_EMAIL = "jacobperalta00000@gmail.com"
+MY_PASSWORD = "govijejqohkapwxt"
 
 data = pandas.read_csv("birthdays.csv")
 today = dt.datetime.now()
