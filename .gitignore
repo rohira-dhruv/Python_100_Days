@@ -4,3 +4,4 @@ key.test
 venv
 .gitignore
 .env
+.DS_Store

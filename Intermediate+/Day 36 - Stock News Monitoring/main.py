@@ -1,21 +1,21 @@
 import os
+import random
+
 import requests
 from twilio.rest import Client
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-STOCK_API_KEY = "QYMB6GNYNJ9X8Z2K"
+STOCK_API_KEY = "0JD3UHM3U5WSJU6LK"
 STOCK_API_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_API_KEY = "e3a83cbd298c4f56bca6855b13df224f"
 NEW_API_ENDPOINT = "https://newsapi.org/v2/everything"
-TWILIO_AUTH_TOKEN = str(os.environ.get("TWILIO_AUTH_TOKEN"))
-TWILIO_ACCOUNT_SID = "ACf82b29f3718ba711a9e53f9e7bb836ca"
-TWILIO_PHONE = "+18145264325"
-
-print(TWILIO_AUTH_TOKEN)
+TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
+TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SSID")
+TWILIO_PHONE = "+16592347418"
 
 stock_params = {
-    "function": "TIME_SERIES_DAILY_ADJUSTED",
+    "function": "TIME_SERIES_DAILY",
     "symbol": STOCK,
     "apikey": STOCK_API_KEY,
 }
@@ -37,20 +37,20 @@ is_up = yesterday_closing_price > prev_closing_price
 change = abs(yesterday_closing_price - prev_closing_price)
 percent_diff = change/prev_closing_price*100
 
-if percent_diff > 1:
+if percent_diff > 0.5:
     news_response = requests.get(url=NEW_API_ENDPOINT, params=news_params)
     news_response.raise_for_status()
     article_list = news_response.json()["articles"][0:3]
     if is_up:
-        arrow_emoji = "🔺"
+        arrow_emoji = "up"
     else:
-        arrow_emoji = "🔻"
-    formatted_articles = [f"{STOCK}: {arrow_emoji}{round(percent_diff)}% \nHeadline: {article['title']}. \nBrief: "
+        arrow_emoji = "down"
+    formatted_articles = [f"{STOCK}: {round(percent_diff, 2)}% {arrow_emoji}\nHeadline: {article['title']}. \nBrief: "
                           f"{article['description']}" for article in article_list]
     client = Client(username=TWILIO_ACCOUNT_SID, password=TWILIO_AUTH_TOKEN)
-    for article in formatted_articles:
-        client.messages.create(
-            from_=TWILIO_PHONE,
-            to="+916386932267",
-            body=article
-        )
+    article = random.choice(formatted_articles)
+    client.messages.create(
+        from_=TWILIO_PHONE,
+        to="+916386932267",
+        body=article
+    )
